@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./AnalogClock.css";
 
 function AnalogClock() {
   const [hour, setHour] = useState("");
@@ -26,25 +27,9 @@ function AnalogClock() {
       <span className="clock__nine"></span>
 
       <div className="clock__rounder"></div>
-      <div
-        className="clock__hour"
-        style={{ transform: hour }}
-        id="clock-hour"
-      ></div>
-      <div
-        className="clock__minutes"
-        style={{ transform: minutes }}
-        id="clock-minutes"
-      ></div>
-      <div
-        className="clock__seconds"
-        style={{ transform: seconds }}
-        id="clock-seconds"
-      ></div>
-
-      <div className="clock__theme">
-        <i className="bx bxs-moon" id="theme-button"></i>
-      </div>
+      <div className="clock__hour" style={{ transform: hour }}></div>
+      <div className="clock__minutes" style={{ transform: minutes }}></div>
+      <div className="clock__seconds" style={{ transform: seconds }}></div>
     </div>
   );
 }

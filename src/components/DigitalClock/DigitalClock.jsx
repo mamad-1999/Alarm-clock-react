@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./DigitalClock.css";
 
 function DigitalClock() {
   const [hourDigital, setHourDigital] = useState("");
@@ -12,11 +13,11 @@ function DigitalClock() {
     let date = new Date();
 
     let hh = date.getHours(),
-      ampm,
       mm = date.getMinutes(),
       day = date.getDate(),
       month = date.getMonth(),
-      year = date.getFullYear();
+      year = date.getFullYear(),
+      ampm;
 
     if (hh >= 12) {
       hh = hh - 12;
@@ -25,17 +26,9 @@ function DigitalClock() {
       ampm = "AM";
     }
 
-    if (hh == 0) {
-      hh = 12;
-    }
-
-    if (hh < 10) {
-      hh = `0${hh}`;
-    }
-
-    if (mm < 10) {
-      mm = `0${mm}`;
-    }
+    if (hh === 0) hh = 12;
+    if (hh < 10) hh = `0${hh}`;
+    if (mm < 10) mm = `0${mm}`;
 
     let months = [
       "Jan",

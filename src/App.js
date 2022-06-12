@@ -1,6 +1,6 @@
 import './App.css';
-import AnalogClock from './components/AnalogClock';
-import DigitalClock from './components/DigitalClock';
+import AnalogClock from './components/AnalogClock/AnalogClock';
+import DigitalClock from './components/DigitalClock/DigitalClock';
 
 function App() {
   return (
