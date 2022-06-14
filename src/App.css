@@ -63,8 +63,10 @@ a {
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
   max-width: 968px;
-  margin-left: var(--mb-1);
-  margin-right: var(--mb-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
 }
 
 .grid {
@@ -83,8 +85,5 @@ a {
   .container {
     margin-left: auto;
     margin-right: auto;
-  }
-  .clock__logo {
-    margin-bottom: 3rem;
   }
 }

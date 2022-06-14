@@ -1,0 +1,41 @@
+.option-Container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.wrapper-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.wrapper-option select {
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  box-shadow: -3px -3px 5px var(--white-color),
+    3px 3px 5px hsla(var(--hue-color), 30%, 86%, 1),
+    inset 3px 3px 5px hsla(var(--hue-color), 30%, 86%, 1),
+    inset -3px -3px 5px var(--white-color);
+  cursor: pointer;
+}
+
+.setAlarm-btn {
+  width: 300px;
+  margin-top: 30px;
+  height: 40px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 1px;
+  background-color: var(--first-color);
+  cursor: pointer;
+}

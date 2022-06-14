@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./DigitalClock.css";
+import months from "../../data";
 
 function DigitalClock() {
   const [hourDigital, setHourDigital] = useState("");
@@ -29,21 +30,6 @@ function DigitalClock() {
     if (hh === 0) hh = 12;
     if (hh < 10) hh = `0${hh}`;
     if (mm < 10) mm = `0${mm}`;
-
-    let months = [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
-    ];
 
     setHourDigital(hh);
     setMinutesDigital(mm);

@@ -1,7 +1,7 @@
 .clock__circle {
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 260px;
+  height: 260px;
   box-shadow: -6px -6px 16px var(--white-color),
     6px 6px 16px hsla(var(--hue-color), 30%, 86%, 1),
     inset 6px 6px 16px hsla(var(--hue-color), 30%, 86%, 1),
@@ -16,7 +16,7 @@
 
 .clock__content {
   align-self: center;
-  row-gap: 3.5rem;
+  row-gap: 2rem;
 }
 
 .clock__twelve,
@@ -26,7 +26,7 @@
   position: absolute;
   width: 1.5rem;
   height: 1px;
-  background-color: var(--text-color-light);
+  background-color: var(--first-color);
 }
 
 .clock__twelve,
