@@ -12,13 +12,18 @@
   gap: 10px;
 }
 
+.disable {
+  pointer-events: none;
+}
+
 .wrapper-option select {
   padding: 10px 15px;
   border-radius: 5px;
   font-size: 16px;
+  text-align: center;
   border: none;
   outline: none;
-  background-color: #fff;
+  background-color: var(--body-color);
   box-shadow: -3px -3px 5px var(--white-color),
     3px 3px 5px hsla(var(--hue-color), 30%, 86%, 1),
     inset 3px 3px 5px hsla(var(--hue-color), 30%, 86%, 1),
@@ -26,8 +31,24 @@
   cursor: pointer;
 }
 
+select::-webkit-scrollbar {
+  width: 8px;
+}
+
+select::-webkit-scrollbar-thumb {
+  background: orange;
+  border-radius: 8px;
+  border-right: 2px solid #ffffff;
+}
+
+select option{
+  display: block;
+  background: var(--first-color);
+  color: #fff;
+}
+
 .setAlarm-btn {
-  width: 300px;
+  width: 320px;
   margin-top: 30px;
   height: 40px;
   border: none;
@@ -38,4 +59,9 @@
   letter-spacing: 1px;
   background-color: var(--first-color);
   cursor: pointer;
+}
+
+.play {
+  background-color: orange;
+  color: #000;
 }

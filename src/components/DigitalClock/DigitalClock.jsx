@@ -1,44 +1,10 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import "./DigitalClock.css";
-import months from "../../data";
+import { AlarmContext } from "../context/ContextAlarm";
 
 function DigitalClock() {
-  const [hourDigital, setHourDigital] = useState("");
-  const [minutesDigital, setMinutesDigital] = useState("");
-  const [amPm, setAmPm] = useState("");
-  const [dayNow, setDayNow] = useState("");
-  const [monthNow, setMonthNow] = useState("");
-  const [yearNow, setYearNow] = useState("");
-
-  const clockText = () => {
-    let date = new Date();
-
-    let hh = date.getHours(),
-      mm = date.getMinutes(),
-      day = date.getDate(),
-      month = date.getMonth(),
-      year = date.getFullYear(),
-      ampm;
-
-    if (hh >= 12) {
-      hh = hh - 12;
-      ampm = "PM";
-    } else {
-      ampm = "AM";
-    }
-
-    if (hh === 0) hh = 12;
-    if (hh < 10) hh = `0${hh}`;
-    if (mm < 10) mm = `0${mm}`;
-
-    setHourDigital(hh);
-    setMinutesDigital(mm);
-    setAmPm(ampm);
-    setDayNow(day);
-    setMonthNow(months[month]);
-    setYearNow(year);
-  };
-  setInterval(clockText, 1000);
+  const { hourDigital, minutesDigital, amPm, dayNow, monthNow, yearNow } =
+    useContext(AlarmContext);
 
   return (
     <div>
