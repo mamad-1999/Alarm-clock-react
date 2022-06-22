@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./AnalogClock.css";
+import { FcAlarmClock } from "react-icons/fc";
+import { AlarmContext } from "../context/ContextAlarm";
 
 function AnalogClock() {
   const [hour, setHour] = useState("");
   const [minutes, setMinutes] = useState("");
   const [seconds, setSeconds] = useState("");
+  const { hasAlarm } = useContext(AlarmContext);
 
   const clock = () => {
     let date = new Date();
@@ -21,6 +24,7 @@ function AnalogClock() {
 
   return (
     <div className="clock__circle">
+      <FcAlarmClock className={`alarm-icon ${hasAlarm && 'active'}`} />
       <span className="clock__twelve"></span>
       <span className="clock__three"></span>
       <span className="clock__six"></span>

@@ -14,6 +14,17 @@
   transition: 0.4s;
 }
 
+.alarm-icon {
+  position: absolute;
+  font-size: 45px;
+  left: -25px;
+  top: -20px;
+}
+
+.active {
+  animation: alarm 2s infinite alternate;
+}
+
 .clock__content {
   align-self: center;
   row-gap: 2rem;
@@ -114,4 +125,28 @@
   height: 7.5rem;
   border-radius: 0.75rem;
   z-index: var(--z-normal);
+}
+
+@keyframes alarm {
+  0%,
+  100% {
+    transform: scale3d(1, 1, 1);
+    text-shadow: 0 0 0 transparent;
+  }
+  10%,
+  20% {
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -6deg);
+  }
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: scale3d(1.2, 1.2, 1.2) rotate3d(0, 0, 1, 6deg);
+    text-shadow: 0 1px 3px rgb(0 0 0 / 30%);
+  }
+  40%,
+  60%,
+  80% {
+    transform: scale3d(1.2, 1.2, 1.2) rotate3d(0, 0, 1, -6deg);
+  }
 }

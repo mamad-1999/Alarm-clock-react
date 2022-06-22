@@ -1,8 +1,8 @@
 import React, { createContext, useEffect, useState } from "react";
 import months from "../../data";
-import sound from "../../mixkit-casino-win-alarm-and-coins-1990.mp3";
+import Sound from "../../mixkit-casino-win-alarm-and-coins-1990.mp3";
 
-const alarm = new Audio(sound);
+const alarm = new Audio(Sound);
 export const AlarmContext = createContext();
 
 function ContextAlarm({ children }) {
